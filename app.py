@@ -4,7 +4,7 @@ from PIL import Image
 import google.generativeai as genai
 
 # Configure the API key directly in the script
-API_KEY = 'Your_API_Key_Here'
+API_KEY = 'AIzaSyCrCKU9n-RHPWj10MU3UIfr3TuSPn5_3_4'
 genai.configure(api_key=API_KEY)
 
 # Generation configuration
@@ -57,7 +57,7 @@ def main():
         try:
             # Load and display the image
             image = Image.open(uploaded_file)
-            st.image(image, caption='Uploaded Image.', use_column_width=True)
+            st.image(image, caption='Uploaded Image.', use_container_width=True)
 
             # Convert image to RGB mode if it has an alpha channel
             if image.mode == 'RGBA':
@@ -93,7 +93,7 @@ def main():
                 st.code(refined_html, language='html')
 
                 # Save the refined HTML to a file
-                with open("index.html", "w") as file:
+                with open("index.html", "w", encoding="utf-8") as file:
                     file.write(refined_html)
                 st.success("HTML file 'index.html' has been created.")
 
