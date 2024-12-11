@@ -7,8 +7,11 @@ import markdown  # For rendering HTML
 from dotenv import load_dotenv
 import os
 
+# Load environment variables
+load_dotenv()
+
 # Configure the API key directly in the script (replace with your actual key)
-API_KEY = os.getenv('GEMINI_API_KEY')
+API_KEY = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=API_KEY)
 
 # Generation configuration
