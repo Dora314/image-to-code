@@ -2,14 +2,16 @@ import streamlit as st
 import pathlib
 from PIL import Image
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
 
 # Configure the API key directly in the script
-API_KEY = 'AIzaSyCrCKU9n-RHPWj10MU3UIfr3TuSPn5_3_4'
+API_KEY = os.getenv('GEMINI_API_KEY')
 genai.configure(api_key=API_KEY)
 
 # Generation configuration
 generation_config = {
-    "temperature": 0.7,
+    "temperature": 1,
     "top_p": 0.95,
     "top_k": 64,
     "max_output_tokens": 8192,

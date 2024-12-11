@@ -1,4 +1,4 @@
-# ui-generator
+# UI Generator
 
 ## Installation
 
